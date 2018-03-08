@@ -9,6 +9,10 @@
   spec:
     chartGitPath: mariadb
     values:
-      - name: image
+      - name: image.name
         value: bitnami/mariadb:10.1.30-r1
+      - name: image.test
+        value: false
+      - name: persistence.size
+        value: 6Gi
 

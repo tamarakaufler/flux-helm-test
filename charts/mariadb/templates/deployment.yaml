@@ -28,7 +28,7 @@ spec:
           mountPath: /bitnami/mariadb
       containers:
       - name: mariadb
-        image: "{{ .Values.image }}"
+        image: "{{ .Values.image.name }}"
         imagePullPolicy: {{ .Values.imagePullPolicy | quote }}
         env:
         {{- if .Values.usePassword }}
