@@ -14,4 +14,6 @@
         value: bitnami/mongodb:3.7.1-r1
       - name: imagePullPolicy
         value: IfNotPresent
+      - name: persistence.enabled
+        value: false
             
