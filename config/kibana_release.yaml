@@ -1,0 +1,20 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha
+kind: FluxHelmRelease
+metadata:
+  name: kibana
+  namespace: default
+  labels:
+    chart: kibana
+spec:
+  chartGitPath: kibana
+  releaseName: kibana
+  values:
+    - name: image.repository
+      value: docker.elastic.co/kibana/kibana-oss
+    - name: image.tag
+      value: 5.0.0
+    - name: image.pullPolicy
+      value: IfNotPresent
+    - name: tolerations
+      value:  "[{\"key\":\"aaa\",\"operator\":\"Equal\",\"value\":\"val\",\"effect\":\"NoSchedule\"},{\"key\":\"bbb\",\"operator\":\"Equal\",\"value\":\"val2\",\"effect\":\"NoSchedule\"}]"
