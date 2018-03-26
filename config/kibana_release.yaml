@@ -14,7 +14,5 @@ spec:
       value: docker.elastic.co/kibana/kibana-oss
     - name: image.tag
       value: 6.0.0
-    - name: image
-      value: docker.elastic.co/kibana/kibana-oss
     - name: image.pullPolicy
       value: IfNotPresent
