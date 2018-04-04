@@ -11,10 +11,10 @@
     releaseName: mongodb-database
     values:
       - name: image
-        value: bitnami/mongodb:3.7.1-r1
+        value: bitnami/mongodb:3.7.1-r0
       - name: imagePullPolicy
         value: IfNotPresent
       - name: resources.requests.cpu
-        value: 99m
+        value: 100m
       - name: resources.requests.memory
-        value: 200Mi
+        value: 300Mi

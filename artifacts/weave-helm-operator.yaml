@@ -25,16 +25,18 @@ spec:
       - name: git-key
         secret:
           secretName: flux-git-deploy
+          defaultMode: 0400
       serviceAccountName: weave-flux
       containers:
       - name: weave-flux-helm-operator
-        image: 'quay.io/weaveworks/helm-operator:alpha'
+        image: 'quay.io/xxx/helm-operator:alpha'
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: git-key
           mountPath: /etc/fluxd/ssh
+          readOnly: true
         args:
         # replace (at least) the following URL
-        - '--git-url=git@github.com:tamarakaufler/flux-helm-test.git'
+        - '--git-url=git@github.com:xxxx/flux-helm-test.git'
         - '--git-branch=test-branch'
         - '--git-charts-path=charts'
