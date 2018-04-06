@@ -3,7 +3,7 @@
 ##
 ## Default: none
 image:
-  name: bitnami/mariadb:10.1.30-r1
+  name: bitnami/mariadb:10.1.30-r0
   test: true
 
 ## Specify an imagePullPolicy (Required)
