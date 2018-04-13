@@ -10,8 +10,6 @@
     chartGitPath: mongodb
     releaseName: kube-system-mongodb
     values:
-      - name: image
-        value: bitnami/mongodb:3.7.1-r1
-      - name: imagePullPolicy
-        value: IfNotPresent
+      image: bitnami/mongodb:3.7.1-r1
+      imagePullPolicy: IfNotPresent
             
