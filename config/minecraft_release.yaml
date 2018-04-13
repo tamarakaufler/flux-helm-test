@@ -1,0 +1,12 @@
+---
+  apiVersion: helm.integrations.flux.weave.works/v1alpha
+  kind: FluxHelmRelease
+  metadata:
+    name: minecraft
+    namespace: default
+    labels:
+      chart: minecraft
+  spec:
+    chartGitPath: minecraft
+    releaseName: minecraft-server
+    values:

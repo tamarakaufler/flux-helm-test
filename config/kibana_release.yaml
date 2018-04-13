@@ -1,0 +1,21 @@
+---
+apiVersion: helm.integrations.flux.weave.works/v1alpha
+kind: FluxHelmRelease
+metadata:
+  name: kibana
+  namespace: default
+  labels:
+    chart: kibana
+spec:
+  chartGitPath: kibana
+  releaseName: my-kibana
+  values:
+    image:
+      repository: docker.elastic.co/kibana/kibana-oss
+      tag: 6.0.0
+      pullPolicy: IfNotPresent
+    tolerations:
+    - key: ZZZ
+      operator: Equal
+      value: zzz
+      effect: NoSchedule
