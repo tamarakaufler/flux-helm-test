@@ -2,8 +2,6 @@
   apiVersion: helm.integrations.flux.weave.works/v1alpha2
   kind: FluxHelmRelease
   metadata:
-    annotations:
-      flux.weave.works/automated: "true"      
     name: mongodb
     namespace: default
     labels:
