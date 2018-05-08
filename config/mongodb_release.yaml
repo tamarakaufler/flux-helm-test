@@ -2,6 +2,8 @@
   apiVersion: helm.integrations.flux.weave.works/v1alpha2
   kind: FluxHelmRelease
   metadata:
+    annotations:
+      flux.weave.works/automated: "true"
     name: mongodb
     namespace: default
     labels:
@@ -10,7 +12,7 @@
     chartGitPath: mongodb
     releaseName: mongodb-database
     values:
-      image: bitnami/mongodb:3.7.1-r1
+      image: bitnami/mongodb:3.7.1-r0
       imagePullPolicy: IfNotPresent
       persistence:
         enabled: false
