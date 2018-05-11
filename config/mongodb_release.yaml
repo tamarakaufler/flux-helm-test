@@ -12,5 +12,5 @@
     chartGitPath: mongodb
     releaseName: mongodb-database
     values:
-      image: docker.io/bitnami/mongodb:3.7.1-r0
+      image: bitnami/mongodb:3.7.1-r1
       imagePullPolicy: IfNotPresent
